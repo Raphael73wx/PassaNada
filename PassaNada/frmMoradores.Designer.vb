@@ -22,7 +22,11 @@ Partial Class frmMoradores
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMoradores))
+        Me.msMoradores = New System.Windows.Forms.MenuStrip()
+        Me.mnNovo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnSalvar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnExcluir = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnFechar = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblCadastro = New System.Windows.Forms.Label()
         Me.lblResponsavel = New System.Windows.Forms.Label()
@@ -37,13 +41,13 @@ Partial Class frmMoradores
         Me.lblLogradouro = New System.Windows.Forms.Label()
         Me.txtNumero = New System.Windows.Forms.MaskedTextBox()
         Me.lblNumero = New System.Windows.Forms.Label()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.txtComplemento = New System.Windows.Forms.MaskedTextBox()
         Me.lblComplemento = New System.Windows.Forms.Label()
         Me.txtCep = New System.Windows.Forms.MaskedTextBox()
         Me.lblCep = New System.Windows.Forms.Label()
-        Me.MaskedTextBox3 = New System.Windows.Forms.MaskedTextBox()
+        Me.txtCidade = New System.Windows.Forms.MaskedTextBox()
         Me.lblCidade = New System.Windows.Forms.Label()
-        Me.MaskedTextBox4 = New System.Windows.Forms.MaskedTextBox()
+        Me.txtBairro = New System.Windows.Forms.MaskedTextBox()
         Me.lblBairro = New System.Windows.Forms.Label()
         Me.cbEstado = New System.Windows.Forms.ComboBox()
         Me.lblEstado = New System.Windows.Forms.Label()
@@ -52,20 +56,47 @@ Partial Class frmMoradores
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtCod = New System.Windows.Forms.MaskedTextBox()
         Me.lblCod = New System.Windows.Forms.Label()
-        Me.mnNovo = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnSalvar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnExcluir = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1.SuspendLayout()
+        Me.lsvDados = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.msMoradores.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'msMoradores
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnNovo, Me.mnSalvar, Me.mnExcluir, Me.mnFechar})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 39)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.msMoradores.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnNovo, Me.mnSalvar, Me.mnExcluir, Me.mnFechar})
+        Me.msMoradores.Location = New System.Drawing.Point(0, 0)
+        Me.msMoradores.Name = "msMoradores"
+        Me.msMoradores.Size = New System.Drawing.Size(800, 39)
+        Me.msMoradores.TabIndex = 0
+        Me.msMoradores.Text = "MenuStrip1"
+        '
+        'mnNovo
+        '
+        Me.mnNovo.Image = Global.PassaNada.My.Resources.Resources.Aha_Soft_Free_3d_Glossy_Interface_Create_32
+        Me.mnNovo.Name = "mnNovo"
+        Me.mnNovo.Size = New System.Drawing.Size(48, 35)
+        Me.mnNovo.Text = "&Novo"
+        Me.mnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'mnSalvar
+        '
+        Me.mnSalvar.Image = Global.PassaNada.My.Resources.Resources.Oxygen_Icons_org_Oxygen_Actions_document_save_32
+        Me.mnSalvar.Name = "mnSalvar"
+        Me.mnSalvar.Size = New System.Drawing.Size(50, 35)
+        Me.mnSalvar.Text = "&Salvar"
+        Me.mnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'mnExcluir
+        '
+        Me.mnExcluir.Image = Global.PassaNada.My.Resources.Resources.Wwalczyszyn_Iwindows_Recycle_Bin_32
+        Me.mnExcluir.Name = "mnExcluir"
+        Me.mnExcluir.Size = New System.Drawing.Size(54, 35)
+        Me.mnExcluir.Text = "&Excluir"
+        Me.mnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'mnFechar
         '
@@ -189,12 +220,12 @@ Partial Class frmMoradores
         Me.lblNumero.TabIndex = 16
         Me.lblNumero.Text = "Número:"
         '
-        'MaskedTextBox1
+        'txtComplemento
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(455, 137)
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(330, 20)
-        Me.MaskedTextBox1.TabIndex = 20
+        Me.txtComplemento.Location = New System.Drawing.Point(455, 137)
+        Me.txtComplemento.Name = "txtComplemento"
+        Me.txtComplemento.Size = New System.Drawing.Size(330, 20)
+        Me.txtComplemento.TabIndex = 20
         '
         'lblComplemento
         '
@@ -224,12 +255,12 @@ Partial Class frmMoradores
         Me.lblCep.TabIndex = 25
         Me.lblCep.Text = "CEP:"
         '
-        'MaskedTextBox3
+        'txtCidade
         '
-        Me.MaskedTextBox3.Location = New System.Drawing.Point(309, 186)
-        Me.MaskedTextBox3.Name = "MaskedTextBox3"
-        Me.MaskedTextBox3.Size = New System.Drawing.Size(197, 20)
-        Me.MaskedTextBox3.TabIndex = 24
+        Me.txtCidade.Location = New System.Drawing.Point(309, 186)
+        Me.txtCidade.Name = "txtCidade"
+        Me.txtCidade.Size = New System.Drawing.Size(197, 20)
+        Me.txtCidade.TabIndex = 24
         '
         'lblCidade
         '
@@ -241,12 +272,12 @@ Partial Class frmMoradores
         Me.lblCidade.TabIndex = 23
         Me.lblCidade.Text = "Cidade:"
         '
-        'MaskedTextBox4
+        'txtBairro
         '
-        Me.MaskedTextBox4.Location = New System.Drawing.Point(12, 186)
-        Me.MaskedTextBox4.Name = "MaskedTextBox4"
-        Me.MaskedTextBox4.Size = New System.Drawing.Size(291, 20)
-        Me.MaskedTextBox4.TabIndex = 22
+        Me.txtBairro.Location = New System.Drawing.Point(12, 186)
+        Me.txtBairro.Name = "txtBairro"
+        Me.txtBairro.Size = New System.Drawing.Size(291, 20)
+        Me.txtBairro.TabIndex = 22
         '
         'lblBairro
         '
@@ -322,35 +353,55 @@ Partial Class frmMoradores
         Me.lblCod.TabIndex = 33
         Me.lblCod.Text = "Cod:"
         '
-        'mnNovo
+        'lsvDados
         '
-        Me.mnNovo.Image = Global.PassaNada.My.Resources.Resources.Aha_Soft_Free_3d_Glossy_Interface_Create_32
-        Me.mnNovo.Name = "mnNovo"
-        Me.mnNovo.Size = New System.Drawing.Size(48, 35)
-        Me.mnNovo.Text = "&Novo"
-        Me.mnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.lsvDados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5})
+        Me.lsvDados.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.lsvDados.FullRowSelect = True
+        Me.lsvDados.GridLines = True
+        Me.lsvDados.HideSelection = False
+        Me.lsvDados.Location = New System.Drawing.Point(0, 280)
+        Me.lsvDados.Name = "lsvDados"
+        Me.lsvDados.Size = New System.Drawing.Size(800, 170)
+        Me.lsvDados.TabIndex = 34
+        Me.lsvDados.UseCompatibleStateImageBehavior = False
+        Me.lsvDados.View = System.Windows.Forms.View.Details
         '
-        'mnSalvar
+        'ColumnHeader1
         '
-        Me.mnSalvar.Image = Global.PassaNada.My.Resources.Resources.Oxygen_Icons_org_Oxygen_Actions_document_save_32
-        Me.mnSalvar.Name = "mnSalvar"
-        Me.mnSalvar.Size = New System.Drawing.Size(50, 35)
-        Me.mnSalvar.Text = "&Salvar"
-        Me.mnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.ColumnHeader1.Text = "Cód"
+        Me.ColumnHeader1.Width = 80
         '
-        'mnExcluir
+        'ColumnHeader2
         '
-        Me.mnExcluir.Image = Global.PassaNada.My.Resources.Resources.Wwalczyszyn_Iwindows_Recycle_Bin_32
-        Me.mnExcluir.Name = "mnExcluir"
-        Me.mnExcluir.Size = New System.Drawing.Size(54, 35)
-        Me.mnExcluir.Text = "&Excluir"
-        Me.mnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.ColumnHeader2.Text = "Responsável"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader2.Width = 250
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "CPF"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 110
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Whatsapp"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 110
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "E-mail"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader5.Width = 250
         '
         'frmMoradores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lsvDados)
         Me.Controls.Add(Me.lblCod)
         Me.Controls.Add(Me.txtCod)
         Me.Controls.Add(Me.btnBuscar)
@@ -360,11 +411,11 @@ Partial Class frmMoradores
         Me.Controls.Add(Me.cbEstado)
         Me.Controls.Add(Me.txtCep)
         Me.Controls.Add(Me.lblCep)
-        Me.Controls.Add(Me.MaskedTextBox3)
+        Me.Controls.Add(Me.txtCidade)
         Me.Controls.Add(Me.lblCidade)
-        Me.Controls.Add(Me.MaskedTextBox4)
+        Me.Controls.Add(Me.txtBairro)
         Me.Controls.Add(Me.lblBairro)
-        Me.Controls.Add(Me.MaskedTextBox1)
+        Me.Controls.Add(Me.txtComplemento)
         Me.Controls.Add(Me.lblComplemento)
         Me.Controls.Add(Me.txtNumero)
         Me.Controls.Add(Me.lblNumero)
@@ -379,18 +430,19 @@ Partial Class frmMoradores
         Me.Controls.Add(Me.lblCpf)
         Me.Controls.Add(Me.lblResponsavel)
         Me.Controls.Add(Me.lblCadastro)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Controls.Add(Me.msMoradores)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.msMoradores
         Me.Name = "frmMoradores"
         Me.Text = "Moradores"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.msMoradores.ResumeLayout(False)
+        Me.msMoradores.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents msMoradores As MenuStrip
     Friend WithEvents mnNovo As ToolStripMenuItem
     Friend WithEvents mnSalvar As ToolStripMenuItem
     Friend WithEvents mnExcluir As ToolStripMenuItem
@@ -408,13 +460,13 @@ Partial Class frmMoradores
     Friend WithEvents lblLogradouro As Label
     Friend WithEvents txtNumero As MaskedTextBox
     Friend WithEvents lblNumero As Label
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents txtComplemento As MaskedTextBox
     Friend WithEvents lblComplemento As Label
     Friend WithEvents txtCep As MaskedTextBox
     Friend WithEvents lblCep As Label
-    Friend WithEvents MaskedTextBox3 As MaskedTextBox
+    Friend WithEvents txtCidade As MaskedTextBox
     Friend WithEvents lblCidade As Label
-    Friend WithEvents MaskedTextBox4 As MaskedTextBox
+    Friend WithEvents txtBairro As MaskedTextBox
     Friend WithEvents lblBairro As Label
     Friend WithEvents cbEstado As ComboBox
     Friend WithEvents lblEstado As Label
@@ -423,4 +475,10 @@ Partial Class frmMoradores
     Friend WithEvents btnBuscar As Button
     Friend WithEvents txtCod As MaskedTextBox
     Friend WithEvents lblCod As Label
+    Friend WithEvents lsvDados As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
 End Class

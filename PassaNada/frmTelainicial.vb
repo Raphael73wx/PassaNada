@@ -10,4 +10,8 @@
     Private Sub FecharToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FecharToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles pcTelaini.Click
+
+    End Sub
 End Class

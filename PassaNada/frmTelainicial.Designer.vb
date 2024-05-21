@@ -22,9 +22,8 @@ Partial Class frmTelainicial
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pcTelaini = New System.Windows.Forms.PictureBox()
         Me.btnHistorico = New System.Windows.Forms.Button()
         Me.btnMoradores = New System.Windows.Forms.Button()
         Me.BtnVisitantes = New System.Windows.Forms.Button()
@@ -33,16 +32,8 @@ Partial Class frmTelainicial
         Me.MoradoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FecharToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pcTelaini, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 39)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
-        Me.MenuStrip1.TabIndex = 4
-        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MenuStrip2
         '
@@ -53,15 +44,16 @@ Partial Class frmTelainicial
         Me.MenuStrip2.TabIndex = 5
         Me.MenuStrip2.Text = "MenuStrip2"
         '
-        'PictureBox1
+        'pcTelaini
         '
-        Me.PictureBox1.BackgroundImage = Global.PassaNada.My.Resources.Resources.t
-        Me.PictureBox1.Location = New System.Drawing.Point(271, 24)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(539, 414)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
+        Me.pcTelaini.BackgroundImage = Global.PassaNada.My.Resources.Resources.t
+        Me.pcTelaini.Dock = System.Windows.Forms.DockStyle.Right
+        Me.pcTelaini.Location = New System.Drawing.Point(271, 39)
+        Me.pcTelaini.Name = "pcTelaini"
+        Me.pcTelaini.Size = New System.Drawing.Size(529, 411)
+        Me.pcTelaini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pcTelaini.TabIndex = 3
+        Me.pcTelaini.TabStop = False
         '
         'btnHistorico
         '
@@ -133,18 +125,16 @@ Partial Class frmTelainicial
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.pcTelaini)
         Me.Controls.Add(Me.btnHistorico)
         Me.Controls.Add(Me.btnMoradores)
         Me.Controls.Add(Me.BtnVisitantes)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.MenuStrip2)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmTelainicial"
         Me.Text = "Tela Inicial"
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcTelaini, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -153,8 +143,7 @@ Partial Class frmTelainicial
     Friend WithEvents BtnVisitantes As Button
     Friend WithEvents btnMoradores As Button
     Friend WithEvents btnHistorico As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents pcTelaini As PictureBox
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents VisitantesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistóricoToolStripMenuItem As ToolStripMenuItem

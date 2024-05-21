@@ -10,4 +10,8 @@
     Private Sub MaskedTextBox2_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txtBuscar.MaskInputRejected
 
     End Sub
+
+    Private Sub txtCod_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txtCod.MaskInputRejected
+
+    End Sub
 End Class
