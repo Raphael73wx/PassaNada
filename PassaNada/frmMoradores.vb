@@ -1,17 +1,37 @@
 ﻿Public Class frmMoradores
-    Private Sub NovoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mnNovo.Click
-
+    Private Sub frmMoradores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        limparFormulario()
+    End Sub
+    Private Sub limparFormulario()
+        txtCod.Clear()
+        txtResponsavel.Clear()
+        txtCpf.Clear()
+        txtWhatsapp.Clear()
+        txtEmail.Clear()
+        txtLogradouro.Clear()
+        txtNumero.Clear()
+        txtComplemento.Clear()
+        txtBairro.Clear()
+        txtCidade.Clear()
+        cbEstado.SelectedText = -1
+        txtCep.Clear()
+        txtResponsavel.Select()
     End Sub
 
-    Private Sub lblCep_Click(sender As Object, e As EventArgs) Handles lblCep.Click
-
+    Private Sub mnNovo_Click(sender As Object, e As EventArgs) Handles mnNovo.Click
+        If MsgBox("deseja realmente criar um novo registro?",
+                     MsgBoxStyle.Question + MsgBoxStyle.YesNo,
+                        "Novo") = MsgBoxResult.Yes Then
+            limparFormulario()
+        End If
     End Sub
 
-    Private Sub MaskedTextBox2_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txtBuscar.MaskInputRejected
-
-    End Sub
-
-    Private Sub txtCod_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txtCod.MaskInputRejected
+    Private Sub mnFechar_Click(sender As Object, e As EventArgs) Handles mnFechar.Click
+        If MsgBox("deseja realmente fechar?",
+                   MsgBoxStyle.Question + MsgBoxStyle.YesNo,
+                    "fechar") = MsgBoxResult.Yes Then
+            Me.Close()
+        End If
 
     End Sub
 End Class

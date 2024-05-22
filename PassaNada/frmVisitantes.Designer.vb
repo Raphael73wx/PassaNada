@@ -31,30 +31,32 @@ Partial Class FrmVisitantes
         Me.mnFechar = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblCadastro = New System.Windows.Forms.Label()
         Me.gpVisitantes = New System.Windows.Forms.GroupBox()
-        Me.gpMorador = New System.Windows.Forms.GroupBox()
-        Me.txtNome = New System.Windows.Forms.TextBox()
-        Me.lblNome = New System.Windows.Forms.Label()
-        Me.lblCpf = New System.Windows.Forms.Label()
-        Me.lblPlaca = New System.Windows.Forms.Label()
-        Me.lblWhatsapp = New System.Windows.Forms.Label()
-        Me.pcVisitantes = New System.Windows.Forms.PictureBox()
-        Me.lblNomem = New System.Windows.Forms.Label()
-        Me.txtNomem = New System.Windows.Forms.TextBox()
-        Me.lblBuscar = New System.Windows.Forms.Label()
-        Me.txtBuscar = New System.Windows.Forms.MaskedTextBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.lblEndereco = New System.Windows.Forms.Label()
-        Me.txtEndereco = New System.Windows.Forms.TextBox()
-        Me.lblWhatsappm = New System.Windows.Forms.Label()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.txtWhatsappM = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
         Me.txtPlaca = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.pcVisitantes = New System.Windows.Forms.PictureBox()
+        Me.lblWhatsapp = New System.Windows.Forms.Label()
+        Me.lblPlaca = New System.Windows.Forms.Label()
+        Me.lblCpf = New System.Windows.Forms.Label()
+        Me.lblNome = New System.Windows.Forms.Label()
+        Me.txtNome = New System.Windows.Forms.TextBox()
+        Me.gpMorador = New System.Windows.Forms.GroupBox()
+        Me.txtWhatsappM = New System.Windows.Forms.MaskedTextBox()
+        Me.lblWhatsappm = New System.Windows.Forms.Label()
+        Me.lblNumero = New System.Windows.Forms.Label()
+        Me.txtNumero = New System.Windows.Forms.TextBox()
+        Me.lblLogradouro = New System.Windows.Forms.Label()
+        Me.lblMorador = New System.Windows.Forms.Label()
+        Me.txtLogradouro = New System.Windows.Forms.TextBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.btnFoto = New System.Windows.Forms.Button()
+        Me.cbMorador = New System.Windows.Forms.ComboBox()
+        Me.txtComplemento = New System.Windows.Forms.TextBox()
+        Me.lblComplemento = New System.Windows.Forms.Label()
         Me.msMoradores.SuspendLayout()
         Me.gpVisitantes.SuspendLayout()
-        Me.gpMorador.SuspendLayout()
         CType(Me.pcVisitantes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gpMorador.SuspendLayout()
         Me.SuspendLayout()
         '
         'msMoradores
@@ -110,6 +112,7 @@ Partial Class FrmVisitantes
         '
         'gpVisitantes
         '
+        Me.gpVisitantes.Controls.Add(Me.btnFoto)
         Me.gpVisitantes.Controls.Add(Me.txtPlaca)
         Me.gpVisitantes.Controls.Add(Me.MaskedTextBox2)
         Me.gpVisitantes.Controls.Add(Me.MaskedTextBox1)
@@ -126,66 +129,29 @@ Partial Class FrmVisitantes
         Me.gpVisitantes.TabStop = False
         Me.gpVisitantes.Text = "Visitantes"
         '
-        'gpMorador
+        'txtPlaca
         '
-        Me.gpMorador.Controls.Add(Me.txtWhatsappM)
-        Me.gpMorador.Controls.Add(Me.lblWhatsappm)
-        Me.gpMorador.Controls.Add(Me.lblEndereco)
-        Me.gpMorador.Controls.Add(Me.txtEndereco)
-        Me.gpMorador.Controls.Add(Me.btnBuscar)
-        Me.gpMorador.Controls.Add(Me.lblNomem)
-        Me.gpMorador.Controls.Add(Me.txtBuscar)
-        Me.gpMorador.Controls.Add(Me.lblBuscar)
-        Me.gpMorador.Controls.Add(Me.txtNomem)
-        Me.gpMorador.Location = New System.Drawing.Point(12, 231)
-        Me.gpMorador.Name = "gpMorador"
-        Me.gpMorador.Size = New System.Drawing.Size(776, 155)
-        Me.gpMorador.TabIndex = 4
-        Me.gpMorador.TabStop = False
-        Me.gpMorador.Text = "Morador"
+        Me.txtPlaca.Location = New System.Drawing.Point(208, 94)
+        Me.txtPlaca.Mask = "000-0000"
+        Me.txtPlaca.Name = "txtPlaca"
+        Me.txtPlaca.Size = New System.Drawing.Size(151, 20)
+        Me.txtPlaca.TabIndex = 11
         '
-        'txtNome
+        'MaskedTextBox2
         '
-        Me.txtNome.Location = New System.Drawing.Point(10, 49)
-        Me.txtNome.Name = "txtNome"
-        Me.txtNome.Size = New System.Drawing.Size(230, 20)
-        Me.txtNome.TabIndex = 0
+        Me.MaskedTextBox2.Location = New System.Drawing.Point(10, 94)
+        Me.MaskedTextBox2.Mask = "(00)0.000-0000"
+        Me.MaskedTextBox2.Name = "MaskedTextBox2"
+        Me.MaskedTextBox2.Size = New System.Drawing.Size(179, 20)
+        Me.MaskedTextBox2.TabIndex = 10
         '
-        'lblNome
+        'MaskedTextBox1
         '
-        Me.lblNome.AutoSize = True
-        Me.lblNome.Location = New System.Drawing.Point(7, 33)
-        Me.lblNome.Name = "lblNome"
-        Me.lblNome.Size = New System.Drawing.Size(35, 13)
-        Me.lblNome.TabIndex = 1
-        Me.lblNome.Text = "Nome"
-        '
-        'lblCpf
-        '
-        Me.lblCpf.AutoSize = True
-        Me.lblCpf.Location = New System.Drawing.Point(265, 33)
-        Me.lblCpf.Name = "lblCpf"
-        Me.lblCpf.Size = New System.Drawing.Size(27, 13)
-        Me.lblCpf.TabIndex = 2
-        Me.lblCpf.Text = "CPF"
-        '
-        'lblPlaca
-        '
-        Me.lblPlaca.AutoSize = True
-        Me.lblPlaca.Location = New System.Drawing.Point(206, 78)
-        Me.lblPlaca.Name = "lblPlaca"
-        Me.lblPlaca.Size = New System.Drawing.Size(86, 13)
-        Me.lblPlaca.TabIndex = 4
-        Me.lblPlaca.Text = "Placa do veiculo"
-        '
-        'lblWhatsapp
-        '
-        Me.lblWhatsapp.AutoSize = True
-        Me.lblWhatsapp.Location = New System.Drawing.Point(7, 78)
-        Me.lblWhatsapp.Name = "lblWhatsapp"
-        Me.lblWhatsapp.Size = New System.Drawing.Size(56, 13)
-        Me.lblWhatsapp.TabIndex = 7
-        Me.lblWhatsapp.Text = "Whatsapp"
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(259, 49)
+        Me.MaskedTextBox1.Mask = "000,000,000-00"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.MaskedTextBox1.TabIndex = 9
         '
         'pcVisitantes
         '
@@ -197,112 +163,168 @@ Partial Class FrmVisitantes
         Me.pcVisitantes.TabIndex = 8
         Me.pcVisitantes.TabStop = False
         '
-        'lblNomem
+        'lblWhatsapp
         '
-        Me.lblNomem.AutoSize = True
-        Me.lblNomem.Location = New System.Drawing.Point(305, 32)
-        Me.lblNomem.Name = "lblNomem"
-        Me.lblNomem.Size = New System.Drawing.Size(35, 13)
-        Me.lblNomem.TabIndex = 10
-        Me.lblNomem.Text = "Nome"
+        Me.lblWhatsapp.AutoSize = True
+        Me.lblWhatsapp.Location = New System.Drawing.Point(7, 78)
+        Me.lblWhatsapp.Name = "lblWhatsapp"
+        Me.lblWhatsapp.Size = New System.Drawing.Size(56, 13)
+        Me.lblWhatsapp.TabIndex = 7
+        Me.lblWhatsapp.Text = "Whatsapp"
         '
-        'txtNomem
+        'lblPlaca
         '
-        Me.txtNomem.Location = New System.Drawing.Point(308, 50)
-        Me.txtNomem.Name = "txtNomem"
-        Me.txtNomem.ReadOnly = True
-        Me.txtNomem.Size = New System.Drawing.Size(236, 20)
-        Me.txtNomem.TabIndex = 9
+        Me.lblPlaca.AutoSize = True
+        Me.lblPlaca.Location = New System.Drawing.Point(206, 78)
+        Me.lblPlaca.Name = "lblPlaca"
+        Me.lblPlaca.Size = New System.Drawing.Size(86, 13)
+        Me.lblPlaca.TabIndex = 4
+        Me.lblPlaca.Text = "Placa do veiculo"
         '
-        'lblBuscar
+        'lblCpf
         '
-        Me.lblBuscar.AutoSize = True
-        Me.lblBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBuscar.Location = New System.Drawing.Point(7, 33)
-        Me.lblBuscar.Name = "lblBuscar"
-        Me.lblBuscar.Size = New System.Drawing.Size(30, 15)
-        Me.lblBuscar.TabIndex = 32
-        Me.lblBuscar.Text = "CPF"
+        Me.lblCpf.AutoSize = True
+        Me.lblCpf.Location = New System.Drawing.Point(265, 33)
+        Me.lblCpf.Name = "lblCpf"
+        Me.lblCpf.Size = New System.Drawing.Size(27, 13)
+        Me.lblCpf.TabIndex = 2
+        Me.lblCpf.Text = "CPF"
         '
-        'txtBuscar
+        'lblNome
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(10, 51)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(179, 20)
-        Me.txtBuscar.TabIndex = 33
+        Me.lblNome.AutoSize = True
+        Me.lblNome.Location = New System.Drawing.Point(7, 33)
+        Me.lblNome.Name = "lblNome"
+        Me.lblNome.Size = New System.Drawing.Size(35, 13)
+        Me.lblNome.TabIndex = 1
+        Me.lblNome.Text = "Nome"
         '
-        'btnBuscar
+        'txtNome
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(208, 48)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 34
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
+        Me.txtNome.Location = New System.Drawing.Point(10, 49)
+        Me.txtNome.Name = "txtNome"
+        Me.txtNome.Size = New System.Drawing.Size(230, 20)
+        Me.txtNome.TabIndex = 0
         '
-        'lblEndereco
+        'gpMorador
         '
-        Me.lblEndereco.AutoSize = True
-        Me.lblEndereco.Location = New System.Drawing.Point(7, 87)
-        Me.lblEndereco.Name = "lblEndereco"
-        Me.lblEndereco.Size = New System.Drawing.Size(52, 13)
-        Me.lblEndereco.TabIndex = 36
-        Me.lblEndereco.Text = "endereco"
-        '
-        'txtEndereco
-        '
-        Me.txtEndereco.Location = New System.Drawing.Point(10, 103)
-        Me.txtEndereco.Name = "txtEndereco"
-        Me.txtEndereco.ReadOnly = True
-        Me.txtEndereco.Size = New System.Drawing.Size(303, 20)
-        Me.txtEndereco.TabIndex = 35
-        '
-        'lblWhatsappm
-        '
-        Me.lblWhatsappm.AutoSize = True
-        Me.lblWhatsappm.Location = New System.Drawing.Point(565, 34)
-        Me.lblWhatsappm.Name = "lblWhatsappm"
-        Me.lblWhatsappm.Size = New System.Drawing.Size(56, 13)
-        Me.lblWhatsappm.TabIndex = 10
-        Me.lblWhatsappm.Text = "Whatsapp"
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        Me.gpMorador.Controls.Add(Me.lblComplemento)
+        Me.gpMorador.Controls.Add(Me.txtComplemento)
+        Me.gpMorador.Controls.Add(Me.cbMorador)
+        Me.gpMorador.Controls.Add(Me.txtWhatsappM)
+        Me.gpMorador.Controls.Add(Me.lblWhatsappm)
+        Me.gpMorador.Controls.Add(Me.lblNumero)
+        Me.gpMorador.Controls.Add(Me.txtNumero)
+        Me.gpMorador.Controls.Add(Me.lblLogradouro)
+        Me.gpMorador.Controls.Add(Me.lblMorador)
+        Me.gpMorador.Controls.Add(Me.txtLogradouro)
+        Me.gpMorador.Location = New System.Drawing.Point(12, 231)
+        Me.gpMorador.Name = "gpMorador"
+        Me.gpMorador.Size = New System.Drawing.Size(776, 155)
+        Me.gpMorador.TabIndex = 4
+        Me.gpMorador.TabStop = False
+        Me.gpMorador.Text = "Morador"
         '
         'txtWhatsappM
         '
-        Me.txtWhatsappM.Location = New System.Drawing.Point(568, 50)
+        Me.txtWhatsappM.Location = New System.Drawing.Point(549, 51)
         Me.txtWhatsappM.Mask = "(00)0,000-0000"
         Me.txtWhatsappM.Name = "txtWhatsappM"
         Me.txtWhatsappM.ReadOnly = True
         Me.txtWhatsappM.Size = New System.Drawing.Size(186, 20)
         Me.txtWhatsappM.TabIndex = 37
         '
-        'MaskedTextBox1
+        'lblWhatsappm
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(259, 49)
-        Me.MaskedTextBox1.Mask = "000,000,000-00"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.MaskedTextBox1.TabIndex = 9
+        Me.lblWhatsappm.AutoSize = True
+        Me.lblWhatsappm.Location = New System.Drawing.Point(546, 35)
+        Me.lblWhatsappm.Name = "lblWhatsappm"
+        Me.lblWhatsappm.Size = New System.Drawing.Size(56, 13)
+        Me.lblWhatsappm.TabIndex = 10
+        Me.lblWhatsappm.Text = "Whatsapp"
         '
-        'MaskedTextBox2
+        'lblNumero
         '
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(10, 94)
-        Me.MaskedTextBox2.Mask = "(00)0.000-0000"
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(179, 20)
-        Me.MaskedTextBox2.TabIndex = 10
+        Me.lblNumero.AutoSize = True
+        Me.lblNumero.Location = New System.Drawing.Point(7, 87)
+        Me.lblNumero.Name = "lblNumero"
+        Me.lblNumero.Size = New System.Drawing.Size(47, 13)
+        Me.lblNumero.TabIndex = 36
+        Me.lblNumero.Text = "Número:"
         '
-        'txtPlaca
+        'txtNumero
         '
-        Me.txtPlaca.Location = New System.Drawing.Point(208, 94)
-        Me.txtPlaca.Mask = "000-0000"
-        Me.txtPlaca.Name = "txtPlaca"
-        Me.txtPlaca.Size = New System.Drawing.Size(151, 20)
-        Me.txtPlaca.TabIndex = 11
+        Me.txtNumero.Location = New System.Drawing.Point(5, 103)
+        Me.txtNumero.Name = "txtNumero"
+        Me.txtNumero.ReadOnly = True
+        Me.txtNumero.Size = New System.Drawing.Size(69, 20)
+        Me.txtNumero.TabIndex = 35
+        '
+        'lblLogradouro
+        '
+        Me.lblLogradouro.AutoSize = True
+        Me.lblLogradouro.Location = New System.Drawing.Point(298, 35)
+        Me.lblLogradouro.Name = "lblLogradouro"
+        Me.lblLogradouro.Size = New System.Drawing.Size(61, 13)
+        Me.lblLogradouro.TabIndex = 10
+        Me.lblLogradouro.Text = "Logradouro"
+        '
+        'lblMorador
+        '
+        Me.lblMorador.AutoSize = True
+        Me.lblMorador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMorador.Location = New System.Drawing.Point(7, 33)
+        Me.lblMorador.Name = "lblMorador"
+        Me.lblMorador.Size = New System.Drawing.Size(54, 15)
+        Me.lblMorador.TabIndex = 32
+        Me.lblMorador.Text = "Morador"
+        '
+        'txtLogradouro
+        '
+        Me.txtLogradouro.Location = New System.Drawing.Point(293, 51)
+        Me.txtLogradouro.Name = "txtLogradouro"
+        Me.txtLogradouro.ReadOnly = True
+        Me.txtLogradouro.Size = New System.Drawing.Size(236, 20)
+        Me.txtLogradouro.TabIndex = 9
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'btnFoto
+        '
+        Me.btnFoto.Location = New System.Drawing.Point(660, 23)
+        Me.btnFoto.Name = "btnFoto"
+        Me.btnFoto.Size = New System.Drawing.Size(75, 23)
+        Me.btnFoto.TabIndex = 12
+        Me.btnFoto.Text = "Foto"
+        Me.btnFoto.UseVisualStyleBackColor = True
+        '
+        'cbMorador
+        '
+        Me.cbMorador.FormattingEnabled = True
+        Me.cbMorador.Location = New System.Drawing.Point(10, 50)
+        Me.cbMorador.Name = "cbMorador"
+        Me.cbMorador.Size = New System.Drawing.Size(277, 21)
+        Me.cbMorador.TabIndex = 38
+        '
+        'txtComplemento
+        '
+        Me.txtComplemento.Location = New System.Drawing.Point(89, 103)
+        Me.txtComplemento.Name = "txtComplemento"
+        Me.txtComplemento.ReadOnly = True
+        Me.txtComplemento.Size = New System.Drawing.Size(203, 20)
+        Me.txtComplemento.TabIndex = 39
+        '
+        'lblComplemento
+        '
+        Me.lblComplemento.AutoSize = True
+        Me.lblComplemento.Location = New System.Drawing.Point(86, 87)
+        Me.lblComplemento.Name = "lblComplemento"
+        Me.lblComplemento.Size = New System.Drawing.Size(71, 13)
+        Me.lblComplemento.TabIndex = 40
+        Me.lblComplemento.Text = "Complemento"
         '
         'FrmVisitantes
         '
@@ -320,9 +342,9 @@ Partial Class FrmVisitantes
         Me.msMoradores.PerformLayout()
         Me.gpVisitantes.ResumeLayout(False)
         Me.gpVisitantes.PerformLayout()
+        CType(Me.pcVisitantes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gpMorador.ResumeLayout(False)
         Me.gpMorador.PerformLayout()
-        CType(Me.pcVisitantes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -342,17 +364,19 @@ Partial Class FrmVisitantes
     Friend WithEvents txtNome As TextBox
     Friend WithEvents gpMorador As GroupBox
     Friend WithEvents pcVisitantes As PictureBox
-    Friend WithEvents lblNomem As Label
-    Friend WithEvents txtNomem As TextBox
-    Friend WithEvents btnBuscar As Button
-    Friend WithEvents txtBuscar As MaskedTextBox
-    Friend WithEvents lblBuscar As Label
-    Friend WithEvents lblEndereco As Label
-    Friend WithEvents txtEndereco As TextBox
+    Friend WithEvents lblLogradouro As Label
+    Friend WithEvents txtLogradouro As TextBox
+    Friend WithEvents lblMorador As Label
+    Friend WithEvents lblNumero As Label
+    Friend WithEvents txtNumero As TextBox
     Friend WithEvents txtPlaca As MaskedTextBox
     Friend WithEvents MaskedTextBox2 As MaskedTextBox
     Friend WithEvents MaskedTextBox1 As MaskedTextBox
     Friend WithEvents txtWhatsappM As MaskedTextBox
     Friend WithEvents lblWhatsappm As Label
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents btnFoto As Button
+    Friend WithEvents cbMorador As ComboBox
+    Friend WithEvents lblComplemento As Label
+    Friend WithEvents txtComplemento As TextBox
 End Class

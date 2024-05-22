@@ -25,14 +25,14 @@ Partial Class frmTelaLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTelaLogin))
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblSenha = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.txtSenha = New System.Windows.Forms.TextBox()
         Me.btnEntrar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLimpa = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pcForm = New System.Windows.Forms.PictureBox()
         Me.btnLimpar = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pcForm, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnLimpar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -56,19 +56,19 @@ Partial Class frmTelaLogin
         Me.lblSenha.TabIndex = 2
         Me.lblSenha.Text = "Senha:"
         '
-        'TextBox1
+        'txtEmail
         '
-        Me.TextBox1.Location = New System.Drawing.Point(269, 305)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(191, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.txtEmail.Location = New System.Drawing.Point(269, 305)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(191, 20)
+        Me.txtEmail.TabIndex = 3
         '
-        'TextBox2
+        'txtSenha
         '
-        Me.TextBox2.Location = New System.Drawing.Point(269, 360)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(191, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.txtSenha.Location = New System.Drawing.Point(269, 360)
+        Me.txtSenha.Name = "txtSenha"
+        Me.txtSenha.Size = New System.Drawing.Size(191, 20)
+        Me.txtSenha.TabIndex = 4
         '
         'btnEntrar
         '
@@ -79,14 +79,14 @@ Partial Class frmTelaLogin
         Me.btnEntrar.Text = "entrar"
         Me.btnEntrar.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnLimpa
         '
-        Me.Button1.Location = New System.Drawing.Point(385, 384)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Limpar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnLimpa.Location = New System.Drawing.Point(385, 384)
+        Me.btnLimpa.Name = "btnLimpa"
+        Me.btnLimpa.Size = New System.Drawing.Size(75, 23)
+        Me.btnLimpa.TabIndex = 6
+        Me.btnLimpa.Text = "Limpar"
+        Me.btnLimpa.UseVisualStyleBackColor = True
         '
         'lblTitle
         '
@@ -98,15 +98,15 @@ Partial Class frmTelaLogin
         Me.lblTitle.TabIndex = 7
         Me.lblTitle.Text = "Tela de Login"
         '
-        'PictureBox1
+        'pcForm
         '
-        Me.PictureBox1.BackgroundImage = Global.PassaNada.My.Resources.Resources.t1
-        Me.PictureBox1.Location = New System.Drawing.Point(259, 51)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(221, 210)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
+        Me.pcForm.BackgroundImage = Global.PassaNada.My.Resources.Resources.t1
+        Me.pcForm.Location = New System.Drawing.Point(259, 51)
+        Me.pcForm.Name = "pcForm"
+        Me.pcForm.Size = New System.Drawing.Size(221, 210)
+        Me.pcForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pcForm.TabIndex = 8
+        Me.pcForm.TabStop = False
         '
         'btnLimpar
         '
@@ -119,24 +119,25 @@ Partial Class frmTelaLogin
         Me.btnLimpar.TabIndex = 0
         Me.btnLimpar.TabStop = False
         '
-        'Form1
+        'frmTelaLogin
         '
+        Me.AcceptButton = Me.btnEntrar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.pcForm)
         Me.Controls.Add(Me.lblTitle)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnLimpa)
         Me.Controls.Add(Me.btnEntrar)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtSenha)
+        Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.lblSenha)
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.btnLimpar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form1"
+        Me.Name = "frmTelaLogin"
         Me.Text = "Form1"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcForm, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnLimpar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -146,10 +147,10 @@ Partial Class frmTelaLogin
     Friend WithEvents btnLimpar As PictureBox
     Friend WithEvents lblEmail As Label
     Friend WithEvents lblSenha As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtSenha As TextBox
     Friend WithEvents btnEntrar As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnLimpa As Button
     Friend WithEvents lblTitle As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pcForm As PictureBox
 End Class

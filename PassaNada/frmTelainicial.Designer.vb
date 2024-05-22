@@ -23,26 +23,58 @@ Partial Class frmTelainicial
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.mnVisitantes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnHistorico = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnMoradores = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnFechar = New System.Windows.Forms.ToolStripMenuItem()
         Me.pcTelaini = New System.Windows.Forms.PictureBox()
         Me.btnHistorico = New System.Windows.Forms.Button()
         Me.btnMoradores = New System.Windows.Forms.Button()
         Me.BtnVisitantes = New System.Windows.Forms.Button()
-        Me.VisitantesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HistóricoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MoradoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FecharToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         CType(Me.pcTelaini, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip2
         '
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisitantesToolStripMenuItem, Me.HistóricoToolStripMenuItem, Me.MoradoresToolStripMenuItem, Me.FecharToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnVisitantes, Me.mnHistorico, Me.mnMoradores, Me.mnFechar})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(800, 39)
         Me.MenuStrip2.TabIndex = 5
         Me.MenuStrip2.Text = "MenuStrip2"
+        '
+        'mnVisitantes
+        '
+        Me.mnVisitantes.Image = Global.PassaNada.My.Resources.Resources.Pictogrammers_Material_Exit_run_32
+        Me.mnVisitantes.Name = "mnVisitantes"
+        Me.mnVisitantes.Size = New System.Drawing.Size(69, 35)
+        Me.mnVisitantes.Text = "&Visitantes"
+        Me.mnVisitantes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'mnHistorico
+        '
+        Me.mnHistorico.Image = Global.PassaNada.My.Resources.Resources.Treetog_Junior_Folder_documents_32
+        Me.mnHistorico.Name = "mnHistorico"
+        Me.mnHistorico.Size = New System.Drawing.Size(67, 35)
+        Me.mnHistorico.Text = "&Histórico"
+        Me.mnHistorico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'mnMoradores
+        '
+        Me.mnMoradores.Image = Global.PassaNada.My.Resources.Resources.Awicons_Vista_Artistic_4_Disabled_Home_32
+        Me.mnMoradores.Name = "mnMoradores"
+        Me.mnMoradores.Size = New System.Drawing.Size(76, 35)
+        Me.mnMoradores.Text = "&Moradores"
+        Me.mnMoradores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'mnFechar
+        '
+        Me.mnFechar.Image = Global.PassaNada.My.Resources.Resources.Hopstarter_Sleek_Xp_Basic_Close_2_32
+        Me.mnFechar.Name = "mnFechar"
+        Me.mnFechar.Size = New System.Drawing.Size(54, 35)
+        Me.mnFechar.Text = "&Fechar"
+        Me.mnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'pcTelaini
         '
@@ -88,38 +120,6 @@ Partial Class frmTelainicial
         Me.BtnVisitantes.Text = "Visitantes"
         Me.BtnVisitantes.UseVisualStyleBackColor = True
         '
-        'VisitantesToolStripMenuItem
-        '
-        Me.VisitantesToolStripMenuItem.Image = Global.PassaNada.My.Resources.Resources.Pictogrammers_Material_Exit_run_32
-        Me.VisitantesToolStripMenuItem.Name = "VisitantesToolStripMenuItem"
-        Me.VisitantesToolStripMenuItem.Size = New System.Drawing.Size(69, 35)
-        Me.VisitantesToolStripMenuItem.Text = "&Visitantes"
-        Me.VisitantesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'HistóricoToolStripMenuItem
-        '
-        Me.HistóricoToolStripMenuItem.Image = Global.PassaNada.My.Resources.Resources.Treetog_Junior_Folder_documents_32
-        Me.HistóricoToolStripMenuItem.Name = "HistóricoToolStripMenuItem"
-        Me.HistóricoToolStripMenuItem.Size = New System.Drawing.Size(67, 35)
-        Me.HistóricoToolStripMenuItem.Text = "&Histórico"
-        Me.HistóricoToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'MoradoresToolStripMenuItem
-        '
-        Me.MoradoresToolStripMenuItem.Image = Global.PassaNada.My.Resources.Resources.Awicons_Vista_Artistic_4_Disabled_Home_32
-        Me.MoradoresToolStripMenuItem.Name = "MoradoresToolStripMenuItem"
-        Me.MoradoresToolStripMenuItem.Size = New System.Drawing.Size(76, 35)
-        Me.MoradoresToolStripMenuItem.Text = "&Moradores"
-        Me.MoradoresToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'FecharToolStripMenuItem
-        '
-        Me.FecharToolStripMenuItem.Image = Global.PassaNada.My.Resources.Resources.Hopstarter_Sleek_Xp_Basic_Close_2_32
-        Me.FecharToolStripMenuItem.Name = "FecharToolStripMenuItem"
-        Me.FecharToolStripMenuItem.Size = New System.Drawing.Size(54, 35)
-        Me.FecharToolStripMenuItem.Text = "&Fechar"
-        Me.FecharToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
         'frmTelainicial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -145,8 +145,8 @@ Partial Class frmTelainicial
     Friend WithEvents btnHistorico As Button
     Friend WithEvents pcTelaini As PictureBox
     Friend WithEvents MenuStrip2 As MenuStrip
-    Friend WithEvents VisitantesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HistóricoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MoradoresToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FecharToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mnVisitantes As ToolStripMenuItem
+    Friend WithEvents mnHistorico As ToolStripMenuItem
+    Friend WithEvents mnMoradores As ToolStripMenuItem
+    Friend WithEvents mnFechar As ToolStripMenuItem
 End Class
