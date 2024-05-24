@@ -356,10 +356,12 @@ Partial Class frmMoradores
         'lsvDados
         '
         Me.lsvDados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5})
+        Me.lsvDados.Cursor = System.Windows.Forms.Cursors.Default
         Me.lsvDados.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.lsvDados.FullRowSelect = True
         Me.lsvDados.GridLines = True
         Me.lsvDados.HideSelection = False
+        Me.lsvDados.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.lsvDados.Location = New System.Drawing.Point(0, 280)
         Me.lsvDados.Name = "lsvDados"
         Me.lsvDados.Size = New System.Drawing.Size(800, 170)
@@ -392,7 +394,7 @@ Partial Class frmMoradores
         '
         'ColumnHeader5
         '
-        Me.ColumnHeader5.Text = "E-mail"
+        Me.ColumnHeader5.Text = "Email"
         Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader5.Width = 250
         '

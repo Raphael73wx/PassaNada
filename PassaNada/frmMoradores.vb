@@ -34,4 +34,31 @@
         End If
 
     End Sub
+    Private Sub mnSalvar_Click(sender As Object, e As EventArgs) Handles mnSalvar.Click
+        If txtResponsavel.Text = "" Or txtEmail.Text = "" Then
+            MsgBox("Por favor, preecha os campos obrigatórios!",
+                    MsgBoxStyle.Information, "Campo obrigatório")
+        Else
+            Dim item As New ListViewItem
+
+            With lsvDados.Items.Add(item)
+                .Text = txtCod.Text
+                .SubItems.Add(txtResponsavel.Text)
+                .SubItems.Add(txtCpf.Text)
+                .SubItems.Add(txtWhatsapp.Text)
+                .SubItems.Add(txtEmail.Text)
+            End With
+
+            limparFormulario()
+        End If
+
+    End Sub
+
+    Private Sub lsvDados_DoubleClick(sender As Object, e As EventArgs) Handles lsvDados.DoubleClick
+        txtCod.Text = lsvDados.SelectedItems(0).Text
+        txtResponsavel.Text = lsvDados.SelectedItems(0).SubItems(1).Text
+        txtCpf.Text = lsvDados.SelectedItems(0).SubItems(2).Text
+        txtWhatsapp.Text = lsvDados.SelectedItems(0).SubItems(3).Text
+        txtEmail.Text = lsvDados.SelectedItems(0).SubItems(4).Text
+    End Sub
 End Class
