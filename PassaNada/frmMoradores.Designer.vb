@@ -43,8 +43,6 @@ Partial Class frmMoradores
         Me.lblNumero = New System.Windows.Forms.Label()
         Me.txtComplemento = New System.Windows.Forms.MaskedTextBox()
         Me.lblComplemento = New System.Windows.Forms.Label()
-        Me.txtCep = New System.Windows.Forms.MaskedTextBox()
-        Me.lblCep = New System.Windows.Forms.Label()
         Me.txtCidade = New System.Windows.Forms.MaskedTextBox()
         Me.lblCidade = New System.Windows.Forms.Label()
         Me.txtBairro = New System.Windows.Forms.MaskedTextBox()
@@ -237,24 +235,6 @@ Partial Class frmMoradores
         Me.lblComplemento.TabIndex = 19
         Me.lblComplemento.Text = "Complemento:"
         '
-        'txtCep
-        '
-        Me.txtCep.Location = New System.Drawing.Point(660, 185)
-        Me.txtCep.Mask = "00000-000"
-        Me.txtCep.Name = "txtCep"
-        Me.txtCep.Size = New System.Drawing.Size(125, 20)
-        Me.txtCep.TabIndex = 26
-        '
-        'lblCep
-        '
-        Me.lblCep.AutoSize = True
-        Me.lblCep.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCep.Location = New System.Drawing.Point(657, 167)
-        Me.lblCep.Name = "lblCep"
-        Me.lblCep.Size = New System.Drawing.Size(34, 15)
-        Me.lblCep.TabIndex = 25
-        Me.lblCep.Text = "CEP:"
-        '
         'txtCidade
         '
         Me.txtCidade.Location = New System.Drawing.Point(309, 186)
@@ -311,7 +291,7 @@ Partial Class frmMoradores
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(512, 254)
+        Me.txtBuscar.Location = New System.Drawing.Point(512, 237)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(179, 20)
         Me.txtBuscar.TabIndex = 30
@@ -320,7 +300,7 @@ Partial Class frmMoradores
         '
         Me.lblBuscar.AutoSize = True
         Me.lblBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBuscar.Location = New System.Drawing.Point(509, 236)
+        Me.lblBuscar.Location = New System.Drawing.Point(509, 219)
         Me.lblBuscar.Name = "lblBuscar"
         Me.lblBuscar.Size = New System.Drawing.Size(48, 15)
         Me.lblBuscar.TabIndex = 29
@@ -328,7 +308,7 @@ Partial Class frmMoradores
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(710, 251)
+        Me.btnBuscar.Location = New System.Drawing.Point(710, 237)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 31
@@ -411,8 +391,6 @@ Partial Class frmMoradores
         Me.Controls.Add(Me.lblBuscar)
         Me.Controls.Add(Me.lblEstado)
         Me.Controls.Add(Me.cbEstado)
-        Me.Controls.Add(Me.txtCep)
-        Me.Controls.Add(Me.lblCep)
         Me.Controls.Add(Me.txtCidade)
         Me.Controls.Add(Me.lblCidade)
         Me.Controls.Add(Me.txtBairro)
@@ -464,8 +442,6 @@ Partial Class frmMoradores
     Friend WithEvents lblNumero As Label
     Friend WithEvents txtComplemento As MaskedTextBox
     Friend WithEvents lblComplemento As Label
-    Friend WithEvents txtCep As MaskedTextBox
-    Friend WithEvents lblCep As Label
     Friend WithEvents txtCidade As MaskedTextBox
     Friend WithEvents lblCidade As Label
     Friend WithEvents txtBairro As MaskedTextBox

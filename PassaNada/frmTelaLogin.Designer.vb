@@ -62,6 +62,7 @@ Partial Class frmTelaLogin
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(191, 20)
         Me.txtEmail.TabIndex = 3
+        Me.txtEmail.Text = "raphael.wsatos2@senacsp.gov.br"
         '
         'txtSenha
         '
@@ -70,6 +71,7 @@ Partial Class frmTelaLogin
         Me.txtSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtSenha.Size = New System.Drawing.Size(191, 20)
         Me.txtSenha.TabIndex = 4
+        Me.txtSenha.Text = "1234"
         '
         'btnEntrar
         '
