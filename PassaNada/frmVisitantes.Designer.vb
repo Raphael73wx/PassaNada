@@ -31,16 +31,20 @@ Partial Class FrmVisitantes
         Me.mnFechar = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblCadastro = New System.Windows.Forms.Label()
         Me.gpVisitantes = New System.Windows.Forms.GroupBox()
+        Me.btnFoto = New System.Windows.Forms.Button()
         Me.txtPlaca = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.pcVisitantes = New System.Windows.Forms.PictureBox()
+        Me.txtWhatsapp = New System.Windows.Forms.MaskedTextBox()
+        Me.txtCpf = New System.Windows.Forms.MaskedTextBox()
+        Me.imgVisitantes = New System.Windows.Forms.PictureBox()
         Me.lblWhatsapp = New System.Windows.Forms.Label()
         Me.lblPlaca = New System.Windows.Forms.Label()
         Me.lblCpf = New System.Windows.Forms.Label()
         Me.lblNome = New System.Windows.Forms.Label()
         Me.txtNome = New System.Windows.Forms.TextBox()
         Me.gpMorador = New System.Windows.Forms.GroupBox()
+        Me.lblComplemento = New System.Windows.Forms.Label()
+        Me.txtComplemento = New System.Windows.Forms.TextBox()
+        Me.cbMorador = New System.Windows.Forms.ComboBox()
         Me.txtWhatsappM = New System.Windows.Forms.MaskedTextBox()
         Me.lblWhatsappm = New System.Windows.Forms.Label()
         Me.lblNumero = New System.Windows.Forms.Label()
@@ -49,13 +53,9 @@ Partial Class FrmVisitantes
         Me.lblMorador = New System.Windows.Forms.Label()
         Me.txtLogradouro = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.btnFoto = New System.Windows.Forms.Button()
-        Me.cbMorador = New System.Windows.Forms.ComboBox()
-        Me.txtComplemento = New System.Windows.Forms.TextBox()
-        Me.lblComplemento = New System.Windows.Forms.Label()
         Me.msMoradores.SuspendLayout()
         Me.gpVisitantes.SuspendLayout()
-        CType(Me.pcVisitantes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgVisitantes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gpMorador.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -114,9 +114,9 @@ Partial Class FrmVisitantes
         '
         Me.gpVisitantes.Controls.Add(Me.btnFoto)
         Me.gpVisitantes.Controls.Add(Me.txtPlaca)
-        Me.gpVisitantes.Controls.Add(Me.MaskedTextBox2)
-        Me.gpVisitantes.Controls.Add(Me.MaskedTextBox1)
-        Me.gpVisitantes.Controls.Add(Me.pcVisitantes)
+        Me.gpVisitantes.Controls.Add(Me.txtWhatsapp)
+        Me.gpVisitantes.Controls.Add(Me.txtCpf)
+        Me.gpVisitantes.Controls.Add(Me.imgVisitantes)
         Me.gpVisitantes.Controls.Add(Me.lblWhatsapp)
         Me.gpVisitantes.Controls.Add(Me.lblPlaca)
         Me.gpVisitantes.Controls.Add(Me.lblCpf)
@@ -129,6 +129,15 @@ Partial Class FrmVisitantes
         Me.gpVisitantes.TabStop = False
         Me.gpVisitantes.Text = "Visitantes"
         '
+        'btnFoto
+        '
+        Me.btnFoto.Location = New System.Drawing.Point(660, 23)
+        Me.btnFoto.Name = "btnFoto"
+        Me.btnFoto.Size = New System.Drawing.Size(75, 23)
+        Me.btnFoto.TabIndex = 12
+        Me.btnFoto.Text = "Foto"
+        Me.btnFoto.UseVisualStyleBackColor = True
+        '
         'txtPlaca
         '
         Me.txtPlaca.Location = New System.Drawing.Point(208, 94)
@@ -137,31 +146,31 @@ Partial Class FrmVisitantes
         Me.txtPlaca.Size = New System.Drawing.Size(151, 20)
         Me.txtPlaca.TabIndex = 11
         '
-        'MaskedTextBox2
+        'txtWhatsapp
         '
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(10, 94)
-        Me.MaskedTextBox2.Mask = "(00)0.000-0000"
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(179, 20)
-        Me.MaskedTextBox2.TabIndex = 10
+        Me.txtWhatsapp.Location = New System.Drawing.Point(10, 94)
+        Me.txtWhatsapp.Mask = "(00)0.000-0000"
+        Me.txtWhatsapp.Name = "txtWhatsapp"
+        Me.txtWhatsapp.Size = New System.Drawing.Size(179, 20)
+        Me.txtWhatsapp.TabIndex = 10
         '
-        'MaskedTextBox1
+        'txtCpf
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(259, 49)
-        Me.MaskedTextBox1.Mask = "000,000,000-00"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.MaskedTextBox1.TabIndex = 9
+        Me.txtCpf.Location = New System.Drawing.Point(259, 49)
+        Me.txtCpf.Mask = "000,000,000-00"
+        Me.txtCpf.Name = "txtCpf"
+        Me.txtCpf.Size = New System.Drawing.Size(100, 20)
+        Me.txtCpf.TabIndex = 9
         '
-        'pcVisitantes
+        'imgVisitantes
         '
-        Me.pcVisitantes.BackgroundImage = CType(resources.GetObject("pcVisitantes.BackgroundImage"), System.Drawing.Image)
-        Me.pcVisitantes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pcVisitantes.Location = New System.Drawing.Point(534, 19)
-        Me.pcVisitantes.Name = "pcVisitantes"
-        Me.pcVisitantes.Size = New System.Drawing.Size(100, 109)
-        Me.pcVisitantes.TabIndex = 8
-        Me.pcVisitantes.TabStop = False
+        Me.imgVisitantes.BackgroundImage = CType(resources.GetObject("imgVisitantes.BackgroundImage"), System.Drawing.Image)
+        Me.imgVisitantes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.imgVisitantes.Location = New System.Drawing.Point(534, 19)
+        Me.imgVisitantes.Name = "imgVisitantes"
+        Me.imgVisitantes.Size = New System.Drawing.Size(100, 109)
+        Me.imgVisitantes.TabIndex = 8
+        Me.imgVisitantes.TabStop = False
         '
         'lblWhatsapp
         '
@@ -224,6 +233,31 @@ Partial Class FrmVisitantes
         Me.gpMorador.TabIndex = 4
         Me.gpMorador.TabStop = False
         Me.gpMorador.Text = "Morador"
+        '
+        'lblComplemento
+        '
+        Me.lblComplemento.AutoSize = True
+        Me.lblComplemento.Location = New System.Drawing.Point(86, 87)
+        Me.lblComplemento.Name = "lblComplemento"
+        Me.lblComplemento.Size = New System.Drawing.Size(71, 13)
+        Me.lblComplemento.TabIndex = 40
+        Me.lblComplemento.Text = "Complemento"
+        '
+        'txtComplemento
+        '
+        Me.txtComplemento.Location = New System.Drawing.Point(89, 103)
+        Me.txtComplemento.Name = "txtComplemento"
+        Me.txtComplemento.ReadOnly = True
+        Me.txtComplemento.Size = New System.Drawing.Size(203, 20)
+        Me.txtComplemento.TabIndex = 39
+        '
+        'cbMorador
+        '
+        Me.cbMorador.FormattingEnabled = True
+        Me.cbMorador.Location = New System.Drawing.Point(10, 50)
+        Me.cbMorador.Name = "cbMorador"
+        Me.cbMorador.Size = New System.Drawing.Size(277, 21)
+        Me.cbMorador.TabIndex = 38
         '
         'txtWhatsappM
         '
@@ -292,40 +326,6 @@ Partial Class FrmVisitantes
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
-        'btnFoto
-        '
-        Me.btnFoto.Location = New System.Drawing.Point(660, 23)
-        Me.btnFoto.Name = "btnFoto"
-        Me.btnFoto.Size = New System.Drawing.Size(75, 23)
-        Me.btnFoto.TabIndex = 12
-        Me.btnFoto.Text = "Foto"
-        Me.btnFoto.UseVisualStyleBackColor = True
-        '
-        'cbMorador
-        '
-        Me.cbMorador.FormattingEnabled = True
-        Me.cbMorador.Location = New System.Drawing.Point(10, 50)
-        Me.cbMorador.Name = "cbMorador"
-        Me.cbMorador.Size = New System.Drawing.Size(277, 21)
-        Me.cbMorador.TabIndex = 38
-        '
-        'txtComplemento
-        '
-        Me.txtComplemento.Location = New System.Drawing.Point(89, 103)
-        Me.txtComplemento.Name = "txtComplemento"
-        Me.txtComplemento.ReadOnly = True
-        Me.txtComplemento.Size = New System.Drawing.Size(203, 20)
-        Me.txtComplemento.TabIndex = 39
-        '
-        'lblComplemento
-        '
-        Me.lblComplemento.AutoSize = True
-        Me.lblComplemento.Location = New System.Drawing.Point(86, 87)
-        Me.lblComplemento.Name = "lblComplemento"
-        Me.lblComplemento.Size = New System.Drawing.Size(71, 13)
-        Me.lblComplemento.TabIndex = 40
-        Me.lblComplemento.Text = "Complemento"
-        '
         'FrmVisitantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -342,7 +342,7 @@ Partial Class FrmVisitantes
         Me.msMoradores.PerformLayout()
         Me.gpVisitantes.ResumeLayout(False)
         Me.gpVisitantes.PerformLayout()
-        CType(Me.pcVisitantes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgVisitantes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gpMorador.ResumeLayout(False)
         Me.gpMorador.PerformLayout()
         Me.ResumeLayout(False)
@@ -363,15 +363,15 @@ Partial Class FrmVisitantes
     Friend WithEvents lblNome As Label
     Friend WithEvents txtNome As TextBox
     Friend WithEvents gpMorador As GroupBox
-    Friend WithEvents pcVisitantes As PictureBox
+    Friend WithEvents imgVisitantes As PictureBox
     Friend WithEvents lblLogradouro As Label
     Friend WithEvents txtLogradouro As TextBox
     Friend WithEvents lblMorador As Label
     Friend WithEvents lblNumero As Label
     Friend WithEvents txtNumero As TextBox
     Friend WithEvents txtPlaca As MaskedTextBox
-    Friend WithEvents MaskedTextBox2 As MaskedTextBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents txtWhatsapp As MaskedTextBox
+    Friend WithEvents txtCpf As MaskedTextBox
     Friend WithEvents txtWhatsappM As MaskedTextBox
     Friend WithEvents lblWhatsappm As Label
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
