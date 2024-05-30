@@ -253,6 +253,7 @@ Partial Class FrmVisitantes
         '
         'cbMorador
         '
+        Me.cbMorador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMorador.FormattingEnabled = True
         Me.cbMorador.Location = New System.Drawing.Point(10, 50)
         Me.cbMorador.Name = "cbMorador"

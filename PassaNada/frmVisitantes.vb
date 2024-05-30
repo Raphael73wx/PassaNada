@@ -22,7 +22,7 @@
         cbMorador.Items.Clear()
         Dim sql As String
         sql = "
-        SELECT PK_MORADOR, RESPONSAVEL
+        SELECT (LPAD(PK_MORADOR,5,0)|| '  -  ' || RESPONSAVEL) RESPONSAVEL
         FROM MORADOR
         ORDER BY RESPONSAVEL
         "
@@ -36,5 +36,25 @@
             End While
         End If
         vgRegistros.Close()
+    End Sub
+
+    Private Sub mnSalvar_Click(sender As Object, e As EventArgs) Handles mnSalvar.Click
+        If txtNome.Text = "" Or txtPlaca.Text = "  -  " Or cbMorador.Text = "" Then
+            MsgBox("Por favor, preencha os campos obrigatórios!",
+                MsgBoxStyle.Information, "campos obrigatórios")
+        Else
+            Dim sql As String
+            Dim id_morador As Integer = CInt(Mid(cbMorador.Text, 1, 5))
+            sql = "
+             INSERT INTO VISITANTE(VISITANTE,CPF,WHATSAPP,PLACA,ID_MORADOR)
+             VALUES(
+             '" & txtNome.Text & "'
+             '" & txtCpf.Text & "'
+             '" & txtWhatsapp.Text & "'
+             '" & txtPlaca.Text & "'
+             '" & id_morador & "'
+             )
+            "
+        End If
     End Sub
 End Class
