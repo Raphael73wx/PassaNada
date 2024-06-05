@@ -22,4 +22,11 @@
             Me.Close()
         End If
     End Sub
+    Private Sub btnHistorico_Click(sender As Object, e As EventArgs) Handles btnHistorico.Click
+        frmHistorico.ShowDialog()
+    End Sub
+
+    Private Sub frmTelainicial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

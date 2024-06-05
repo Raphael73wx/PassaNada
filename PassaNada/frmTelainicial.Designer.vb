@@ -27,15 +27,15 @@ Partial Class frmTelainicial
         Me.mnHistorico = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnMoradores = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnFechar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.pcTelaini = New System.Windows.Forms.PictureBox()
         Me.btnHistorico = New System.Windows.Forms.Button()
         Me.btnMoradores = New System.Windows.Forms.Button()
         Me.BtnVisitantes = New System.Windows.Forms.Button()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip2.SuspendLayout()
-        CType(Me.pcTelaini, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.pcTelaini, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip2
@@ -78,6 +78,20 @@ Partial Class frmTelainicial
         Me.mnFechar.Size = New System.Drawing.Size(54, 35)
         Me.mnFechar.Text = "&Fechar"
         Me.mnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripUsuario})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 428)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(271, 22)
+        Me.StatusStrip1.TabIndex = 6
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripUsuario
+        '
+        Me.ToolStripUsuario.Name = "ToolStripUsuario"
+        Me.ToolStripUsuario.Size = New System.Drawing.Size(0, 17)
         '
         'pcTelaini
         '
@@ -123,20 +137,6 @@ Partial Class frmTelainicial
         Me.BtnVisitantes.Text = "Visitantes"
         Me.BtnVisitantes.UseVisualStyleBackColor = True
         '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripUsuario})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 428)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(271, 22)
-        Me.StatusStrip1.TabIndex = 6
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripUsuario
-        '
-        Me.ToolStripUsuario.Name = "ToolStripUsuario"
-        Me.ToolStripUsuario.Size = New System.Drawing.Size(0, 17)
-        '
         'frmTelainicial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -152,9 +152,9 @@ Partial Class frmTelainicial
         Me.Text = "Tela Inicial"
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
-        CType(Me.pcTelaini, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.pcTelaini, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
