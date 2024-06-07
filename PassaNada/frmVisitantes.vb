@@ -1,4 +1,6 @@
 ﻿Public Class FrmVisitantes
+    Private foto As String = ""
+
     Private Sub FrmVisitantes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LimparFormulario()
         listarMoradores()
@@ -39,6 +41,12 @@
     End Sub
 
     Private Sub mnSalvar_Click(sender As Object, e As EventArgs) Handles mnSalvar.Click
+        Dim caminho_foto() As String
+        Dim nome_foto As String = ""
+        Dim ext_foto As String
+        Dim destino As String = "C:\Users\raphael.e
+
+
         If txtNome.Text = "" Or txtPlaca.Text = "  -  " Or cbMorador.Text = "" Then
             MsgBox("Por favor, preencha os campos obrigatórios!",
                 MsgBoxStyle.Information, "campos obrigatórios")
@@ -95,6 +103,19 @@
     Private Sub mnFechar_Click(sender As Object, e As EventArgs) Handles mnFechar.Click
         If MsgBox("Deseja realmente fechar?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Fechar") = MsgBoxResult.Yes Then
             Me.Close()
+        End If
+    End Sub
+
+    Private Sub btnFoto_Click(sender As Object, e As EventArgs) Handles btnFoto.Click
+        Dim dialog As OpenFileDialog = New OpenFileDialog()
+        dialog.Filter = "Imagens|*.jpg;*.jpeg;*.png"
+
+        If dialog.ShowDialog() = DialogResult.OK Then
+            foto = dialog.FileName
+            With imgfoto
+                .Image = Image.FromFile(foto)
+                .SizeMode = PictureBoxSizeMode.Zoom
+            End With
         End If
     End Sub
 End Class
